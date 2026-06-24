@@ -700,6 +700,7 @@ a  { color: inherit; text-decoration: none; }
   .feature .feat-text { padding: var(--sp-lg) var(--sp-md); margin: 0 !important; }
   .feature.flip { direction: ltr; }
   .feat-img-wrap { min-height: 55vw; height: 55vw; }
+  .feat-img-wrap img { padding: var(--sp-sm); }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-inner .footer-brand { grid-column: 1 / -1; }
   .hero-float-wrap { display: none; }
