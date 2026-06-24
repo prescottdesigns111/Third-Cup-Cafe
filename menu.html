@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Third Cup Cafe</title>
+  <meta name="description" content="Browse the Third Cup Cafe menu: specialty drinks, all day breakfast, and house-made snacks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ───────────────────────────────────────── -->
+  <nav class="site-nav scrolled">
+    <a href="index.html" class="nav-logo">
+      <img src="images/thirdcup logo.jpg" alt="Third Cup Cafe" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="index.html#contact">Visit</a></li>
+    </ul>
+    <a href="index.html#contact" class="btn btn-outline" style="padding:.55rem 1.35rem;font-size:.82rem;">Find Us</a>
+  </nav>
+
+  <!-- ── Menu Hero ─────────────────────────────────────────── -->
+  <header style="padding-top:80px;">
+    <div class="menu-hero reveal">
+      <span style="display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.75rem;">What we're serving</span>
+      <h1>The Menu</h1>
+      <p>Crafted daily. Served all day. Made with care.</p>
+    </div>
+  </header>
+
+  <!-- ── Sticky section nav ────────────────────────────────── -->
+  <nav class="menu-subnav" aria-label="Menu sections">
+    <a href="#limited-time">Limited Time</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#food">Food</a>
+    <a href="#desserts">Snacks &amp; Sweets</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LIMITED TIME
+  ═══════════════════════════════════════════════════════ -->
+  <section class="menu-section" id="limited-time">
+    <div class="menu-section-header reveal">
+      <h2>Limited Time</h2>
+      <span class="item-count">While it lasts</span>
+    </div>
+
+    <!-- banner callout -->
+    <div class="limited-banner reveal reveal-delay-1">
+      <span class="limited-banner-icon">⏳</span>
+      <div>
+        <strong>These won't be here forever.</strong>
+        <p>Seasonal specials and one-off collabs — order them before they're gone.</p>
+      </div>
+    </div>
+
+    <div class="menu-grid" style="margin-top:var(--sp-md)">
+
+      <article class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img-ph" style="background:linear-gradient(135deg,rgba(100,42,5,.08) 0%,rgba(238,200,207,.4) 100%)">
+          <span class="ph-icon">🌸</span>
+        </div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Sakura Latte</h3>
+          <p class="menu-card-desc">Cherry blossom syrup, steamed oat milk, and a single-origin espresso shot. Light, floral, and fleeting.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$8.00</span>
+            <span class="menu-card-tag">Limited</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-img-ph" style="background:linear-gradient(135deg,rgba(100,42,5,.08) 0%,rgba(238,200,207,.4) 100%)">
+          <span class="ph-icon">🫙</span>
+        </div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Mango Float Shake</h3>
+          <p class="menu-card-desc">Inspired by the classic Filipino mango float — layers of cream, ripe mango, and crushed biscuit in drink form.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$9.50</span>
+            <span class="menu-card-tag">Limited</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-3">
+        <div class="menu-card-img-ph" style="background:linear-gradient(135deg,rgba(100,42,5,.08) 0%,rgba(238,200,207,.4) 100%)">
+          <span class="ph-icon">🍳</span>
+        </div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Longsilog Plate</h3>
+          <p class="menu-card-desc">Garlic rice, two sunny-side eggs, and sweet pork longganisa. A proper Filipino breakfast — all day, obviously.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$16.00</span>
+            <span class="menu-card-tag">Limited</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img-ph" style="background:linear-gradient(135deg,rgba(100,42,5,.08) 0%,rgba(238,200,207,.4) 100%)">
+          <span class="ph-icon">🫧</span>
+        </div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Calamansi Fizz</h3>
+          <p class="menu-card-desc">Filipino calamansi juice, honey, and sparkling water. Zippy, citrusy, and dangerously refreshing.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$7.00</span>
+            <span class="menu-card-tag">Limited</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(100,42,5,.1) 30%,rgba(100,42,5,.1) 70%,transparent);margin:0 var(--sp-lg);"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       DRINKS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="menu-section" id="drinks">
+    <div class="menu-section-header reveal">
+      <h2>Drinks</h2>
+      <span class="item-count">Hot &amp; Cold</span>
+    </div>
+
+    <div class="menu-grid">
+
+      <article class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img-ph"><span class="ph-icon">☕</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Third Cup Classic</h3>
+          <p class="menu-card-desc">Double-shot espresso over oat milk with house vanilla syrup. The one that started it all.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$6.50</span>
+            <span class="menu-card-tag">Signature</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-img-ph"><span class="ph-icon">🧋</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Hibiscus Refresher</h3>
+          <p class="menu-card-desc">Cold-brewed hibiscus, passion fruit, and sparkling water. Tart, floral, unforgettable.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$7.00</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-3">
+        <div class="menu-card-img-ph"><span class="ph-icon">🥤</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Sunrise Smoothie</h3>
+          <p class="menu-card-desc">Mango, pineapple, banana, and coconut milk blended to a velvety, sun-coloured smoothie.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$8.50</span>
+            <span class="menu-card-tag">Vegan</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img-ph"><span class="ph-icon">☕</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Cortado</h3>
+          <p class="menu-card-desc">Equal parts espresso and steamed whole milk. Short, strong, and perfectly balanced.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$5.00</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-img-ph"><span class="ph-icon">🍵</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Matcha Cloud</h3>
+          <p class="menu-card-desc">Ceremonial-grade matcha whisked with oat milk and topped with cold foam. Earthy and creamy.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$8.00</span>
+            <span class="menu-card-tag">Vegan</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-3">
+        <div class="menu-card-img-ph"><span class="ph-icon">🧊</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Brown Sugar Latte</h3>
+          <p class="menu-card-desc">Espresso, house-made brown sugar syrup, oat milk, and a dash of cinnamon over ice.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$7.50</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(100,42,5,.1) 30%,rgba(100,42,5,.1) 70%,transparent);margin:0 var(--sp-lg);"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOD
+  ═══════════════════════════════════════════════════════ -->
+  <section class="menu-section" id="food">
+    <div class="menu-section-header reveal">
+      <h2>Food</h2>
+      <span class="item-count">All Day Breakfast &amp; Lunch</span>
+    </div>
+
+    <div class="menu-grid">
+
+      <article class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img-ph"><span class="ph-icon">🧇</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Brown Butter Waffles</h3>
+          <p class="menu-card-desc">Golden waffles with maple crème fraîche and seasonal fruit. Available all day.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$13.00</span>
+            <span class="menu-card-tag">All Day</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-img-ph"><span class="ph-icon">🍔</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Smash Burger</h3>
+          <p class="menu-card-desc">Double smashed patty, American cheese, pickles, and café sauce on a brioche bun.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$16.00</span>
+            <span class="menu-card-tag">Fan Fave</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-3">
+        <div class="menu-card-img-ph"><span class="ph-icon">🥑</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Avocado Toast</h3>
+          <p class="menu-card-desc">Sourdough, smashed avo, everything bagel seasoning, chilli, and a poached egg.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$14.00</span>
+            <span class="menu-card-tag">Vegetarian</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img-ph"><span class="ph-icon">🍳</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Big Breakfast Plate</h3>
+          <p class="menu-card-desc">Two eggs your way, sourdough toast, grilled tomato, mushrooms, and crispy bacon.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$17.00</span>
+            <span class="menu-card-tag">All Day</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-img-ph"><span class="ph-icon">🥣</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Granola Bowl</h3>
+          <p class="menu-card-desc">House-toasted granola with coconut yogurt, honey, seeds, and fresh seasonal fruit.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$11.00</span>
+            <span class="menu-card-tag">Vegan</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-3">
+        <div class="menu-card-img-ph"><span class="ph-icon">🥞</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Ricotta Hotcakes</h3>
+          <p class="menu-card-desc">Fluffy ricotta pancakes with whipped butter, honeycomb, and a dusting of icing sugar.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$15.00</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(100,42,5,.1) 30%,rgba(100,42,5,.1) 70%,transparent);margin:0 var(--sp-lg);"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       DESSERTS / SNACKS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="menu-section" id="desserts">
+    <div class="menu-section-header reveal">
+      <h2>Snacks &amp; Sweets</h2>
+      <span class="item-count">House Baked Daily</span>
+    </div>
+
+    <div class="menu-grid">
+
+      <article class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img-ph"><span class="ph-icon">🍰</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Lavender Chiffon Cake</h3>
+          <p class="menu-card-desc">Feather-light chiffon with earl grey cream and a delicate purple glaze. Sliced to order.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$9.00</span>
+            <span class="menu-card-tag">House Baked</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-img-ph"><span class="ph-icon">🍪</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Tahini Choc Chip Cookie</h3>
+          <p class="menu-card-desc">Thick, chewy, dark chocolate chunks and flaky sea salt. Warm on request.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$4.50</span>
+            <span class="menu-card-tag">House Baked</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal reveal-delay-3">
+        <div class="menu-card-img-ph"><span class="ph-icon">🍮</span></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-name">Espresso Panna Cotta</h3>
+          <p class="menu-card-desc">Silky espresso cream set to a gentle jiggle, with caramel glaze and a single coffee bean.</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">$8.00</span>
+            <span class="menu-card-tag">Seasonal</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer id="contact" class="site-footer" style="margin-top:var(--sp-xl)">
+    <div class="footer-inner reveal">
+      <div class="footer-brand">
+        <img src="images/thirdcup logo.jpg" alt="Third Cup Cafe" class="footer-logo-img" />
+        <p class="footer-tagline">Specialty coffee, all day breakfast, and food worth lingering over.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>
+          Mon – Fri: 7 am – 7 pm<br />
+          Saturday: 8 am – 6 pm<br />
+          Sunday: 9 am – 5 pm
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <address>
+          42 Ember Lane<br />
+          Brooklyn, NY 11201<br /><br />
+          hello@thirdcup.co<br />
+          (718) 555-0192
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Third Cup Cafe. All rights reserved.</span>
+      <span>Made with care &amp; caffeine.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
