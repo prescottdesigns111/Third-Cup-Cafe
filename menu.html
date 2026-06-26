@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu — Third Cup Cafe</title>
-  <meta name="description" content="Browse the Third Cup Cafe menu: specialty drinks, all day breakfast, and house-made snacks." />
+  <meta name="description" content="Browse the Third Cup Cafe menu: specialty drinks, all day breakfast, and house-made sweets." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -21,6 +21,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html" class="active">Menu</a></li>
       <li><a href="index.html#contact">Visit</a></li>
+      <li><span class="nav-coming-soon">Delivery Coming Soon</span></li>
     </ul>
     <a href="index.html#contact" class="btn btn-outline" style="padding:.55rem 1.35rem;font-size:.82rem;">Find Us</a>
   </nav>
@@ -34,316 +35,986 @@
     </div>
   </header>
 
-  <!-- ── Sticky section nav ────────────────────────────────── -->
-  <nav class="menu-subnav" aria-label="Menu sections">
-    <a href="#limited-time">Limited Time</a>
-    <a href="#drinks">Drinks</a>
-    <a href="#food">Food</a>
-    <a href="#desserts">Snacks &amp; Sweets</a>
-  </nav>
+  <!-- ── Main Tab Bar ──────────────────────────────────────── -->
+  <div class="menu-tabs-main" role="tablist" aria-label="Menu categories">
+    <button class="tab-main-btn active" data-tab="limited" role="tab" aria-selected="true">Limited Time ✦</button>
+    <button class="tab-main-btn" data-tab="drinks" role="tab" aria-selected="false">Drinks</button>
+    <button class="tab-main-btn" data-tab="food" role="tab" aria-selected="false">Food</button>
+    <button class="tab-main-btn" data-tab="sweets" role="tab" aria-selected="false">Sweets</button>
+  </div>
 
-  <!-- ═══════════════════════════════════════════════════════
-       LIMITED TIME
-  ═══════════════════════════════════════════════════════ -->
-  <section class="menu-section" id="limited-time">
-    <div class="menu-section-header reveal">
-      <h2>Limited Time</h2>
-      <span class="item-count">While it lasts</span>
+  <!-- ══════════════════════════════════════════════════════════
+       DRINKS TAB
+  ══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-drinks">
+
+    <div class="menu-subtabs" role="tablist" aria-label="Drink categories">
+      <button class="tab-sub-btn active" data-subtab="drinks-withcoffee" role="tab">With Coffee</button>
+      <button class="tab-sub-btn" data-subtab="drinks-withoutcoffee" role="tab">Without Coffee</button>
+      <button class="tab-sub-btn" data-subtab="drinks-kids" role="tab">Kid's Drinks</button>
     </div>
 
-    <!-- banner callout -->
-    <div class="limited-banner reveal reveal-delay-1">
-      <span class="limited-banner-icon">⏳</span>
-      <div>
-        <strong>These won't be here forever.</strong>
-        <p>Seasonal specials and one-off collabs — order them before they're gone.</p>
+    <!-- ── With Coffee ───────────────────────────────────────── -->
+    <div class="sub-panel active" id="sub-drinks-withcoffee">
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Frappes</h2>
+          <span class="item-count">Grande 16 oz · Large 20 oz</span>
+        </div>
+        <div class="drink-list">
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Mocha</span><span class="drink-desc">Rich espresso blended with chocolate and ice, topped with whipped cream.</span></div><span class="drink-price">Grande $7.25 / Large $7.75</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Caramel</span><span class="drink-desc">Smooth caramel blended with espresso and milk, crowned with whipped cream.</span></div><span class="drink-price">Grande $7.25 / Large $7.75</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Java Chips</span><span class="drink-desc">Espresso frappe loaded with chocolate chips for extra indulgent crunch.</span></div><span class="drink-price">Grande $7.25 / Large $7.75</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Caramel Java Chips</span><span class="drink-desc">Caramel and java chip frappe — the ultimate indulgence.</span></div><span class="drink-price">Grande $7.25 / Large $8.00</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Ferrero Rocher</span><span class="drink-desc">Hazelnut chocolate frappe inspired by the beloved confection.</span></div><span class="drink-price">Grande $7.25 / Large $8.00</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Biscoff</span><span class="drink-desc">Spiced Biscoff cookie butter blended into a creamy frappe.</span></div><span class="drink-price">Grande $7.75 / Large $8.00</span></div>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Hot/Iced Beverages</h2>
+          <span class="item-count">Grande 16 oz · Large 20 oz</span>
+        </div>
+        <div class="drink-list">
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Brown Sugar Shaken Espresso</span><span class="drink-desc">Bold espresso shaken with brown sugar over ice for a smooth, frothy experience.</span></div><span class="drink-price">$6.99</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Brewed Coffee</span><span class="drink-desc">Freshly brewed drip coffee.</span></div><span class="drink-price">Grande $3.25 / Large $3.95</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Misto</span><span class="drink-desc">Half brewed coffee, half steamed milk.</span></div><span class="drink-price">Grande $4.25 / Large $4.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Cafe Mocha</span><span class="drink-desc">Rich espresso with chocolate syrup and steamed milk.</span></div><span class="drink-price">Grande $5.95 / Large $6.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Canadiano</span><span class="drink-desc">Espresso diluted with hot water — smooth and rich.</span></div><span class="drink-price">Grande $3.25 / Large $3.95</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Flat White</span><span class="drink-desc">Velvety microfoam espresso — stronger than a latte.</span></div><span class="drink-price">Grande $5.25 / Large $5.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Caramel Macchiato</span><span class="drink-desc">Espresso over vanilla milk with signature caramel drizzle. Available hot or iced.</span></div><span class="drink-price">Grande $5.95 / Large $6.50</span></div>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Cold Brews</h2>
+          <span class="item-count">Slow-steeped 12+ hours · Grande 16 oz · Large 20 oz</span>
+        </div>
+        <div class="drink-list">
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Black Caf</span><span class="drink-desc">Pure cold brew — dark, smooth, and unapologetically bold.</span></div><span class="drink-price">Grande $3.85 / Large $4.75</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Vanilla Sweet Cream</span><span class="drink-desc">Cold brew topped with a cascade of silky vanilla sweet cream.</span></div><span class="drink-price">Grande $6.99 / Large $7.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Cinnamon</span><span class="drink-desc">Cold brew infused with warm cinnamon spice.</span></div><span class="drink-price">Grande $6.99 / Large $7.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Caramel Macchiato</span><span class="drink-desc">Espresso over vanilla milk with signature caramel drizzle. Available hot or iced.</span></div><span class="drink-price">Grande $5.95 / Large $6.50</span></div>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Flavour Shots</h2>
+          <span class="item-count">Add to any drink</span>
+        </div>
+        <p class="section-note reveal">Customize your drink with any of our house flavour shots.</p>
+        <div class="flavour-grid reveal reveal-delay-1">
+          <span class="flavour-pill">Vanilla (SF)</span>
+          <span class="flavour-pill">French Vanilla</span>
+          <span class="flavour-pill">Raspberry</span>
+          <span class="flavour-pill">Caramel (SF)</span>
+          <span class="flavour-pill">Strawberry</span>
+          <span class="flavour-pill">Lavender</span>
+          <span class="flavour-pill">Cinnamon</span>
+          <span class="flavour-pill">Hazelnut</span>
+          <span class="flavour-pill">Pistachio</span>
+          <span class="flavour-pill">Peppermint</span>
+          <span class="flavour-pill">Coconut</span>
+          <span class="flavour-pill">Mojito Mix</span>
+          <span class="flavour-pill">Blue Curacao</span>
+          <span class="flavour-pill">Green Apple</span>
+          <span class="flavour-pill">Cherry</span>
+          <span class="flavour-pill">Toasted Marshmallow</span>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Milk Options</h2>
+          <span class="item-count">Substitute in any drink</span>
+        </div>
+        <p class="section-note reveal">Swap your milk in any drink at no extra charge.</p>
+        <div class="flavour-grid reveal reveal-delay-1">
+          <span class="flavour-pill">Half-and-Half</span>
+          <span class="flavour-pill">Whole Milk</span>
+          <span class="flavour-pill">Skim Milk</span>
+          <span class="flavour-pill">Oat Milk</span>
+          <span class="flavour-pill">Soy Milk</span>
+          <span class="flavour-pill">Almond Milk</span>
+          <span class="flavour-pill">Coconut Milk</span>
+          <span class="flavour-pill">Chocolate Milk 1%</span>
+        </div>
+      </section>
+
+    </div><!-- /sub-drinks-withcoffee -->
+
+    <!-- ── Without Coffee ────────────────────────────────────── -->
+    <div class="sub-panel" id="sub-drinks-withoutcoffee">
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Frappes</h2>
+          <span class="item-count">Grande 16 oz · Large 20 oz</span>
+        </div>
+        <div class="drink-list">
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Chocolate Cream</span><span class="drink-desc">Velvety chocolate cream blended to perfection — no espresso needed.</span></div><span class="drink-price">Grande $7.25 / Large $7.75</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Oreo</span><span class="drink-desc">Blended Oreo cookies and cream topped with crushed cookie crumble. With or without coffee.</span></div><span class="drink-price">Grande $7.25 / Large $8.00</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Vanilla Bean</span><span class="drink-desc">Pure and creamy vanilla bean frappe — a timeless classic.</span></div><span class="drink-price">Grande $7.25 / Large $8.00</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Strawberries &amp; Cream</span><span class="drink-desc">Fresh strawberry puree blended with sweet cream.</span></div><span class="drink-price">Grande $7.75 / Large $8.00</span></div>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Hot/Iced Beverages</h2>
+          <span class="item-count">Grande 16 oz · Large 20 oz</span>
+        </div>
+        <div class="drink-list">
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Matcha Latte</span><span class="drink-desc">Premium ceremonial matcha with steamed milk. Hot or iced.</span></div><span class="drink-price">Grande $6.25 / Large $6.75</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Strawberry Matcha</span><span class="drink-desc">Vibrant strawberry puree layered beneath creamy matcha.</span></div><span class="drink-price">Grande $7.00 / Large $7.50</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Chai Latte</span><span class="drink-desc">Warm spiced chai tea blended with steamed milk. Available hot or iced.</span></div><span class="drink-price">Grande $6.50 / Large $7.00</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Banana Matcha Latte</span><span class="drink-desc">Creamy matcha latte blended with fresh banana for a naturally sweet, smooth twist.</span></div><span class="drink-price">Grande $6.75 / Large $7.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Cherry Chai</span><span class="drink-desc">Spiced chai latte layered with sweet cherry — beautifully vibrant, hot or iced.</span></div><span class="drink-price">Grande $6.75 / Large $7.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">London Fog</span><span class="drink-desc">Earl Grey tea latte with steamed milk and a hint of vanilla.</span></div><span class="drink-price">Grande $4.75 / Large $5.00</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Steeped Tea Latte</span><span class="drink-desc">Your choice of tea steeped and blended with steamed milk for a cozy, creamy sip. Available hot or iced.<br><em style="font-size:.82em;opacity:.75;">Black · Green · Chai · Chamomile · Passion · Wild Sweet Orange</em></span></div><span class="drink-price">Grande $5.50 / Large $6.00</span></div>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Refreshers</h2>
+          <span class="item-count">Grande 16 oz</span>
+        </div>
+        <div class="drink-list">
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Yarmouth Sunset Refresher</span><span class="drink-desc">A vibrant, tropical refresher inspired by the colours of a Yarmouth sunset.</span></div><span class="drink-price">$7.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Cranberry Pineapple Refresher</span><span class="drink-desc">Bright cranberry and tropical pineapple blended into a refreshing iced drink.</span></div><span class="drink-price">$7.25</span></div>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Teas</h2>
+          <span class="item-count">Grande 16 oz · Large 20 oz</span>
+        </div>
+        <p class="section-note reveal">All teas available as-is or steeped — steeped tea is brewed directly in hot water and allowed to fully steep for maximum flavour, rather than being served in a bag on the side. Herbal teas include Chamomile, Passion Tea, and Wild Sweet Orange.</p>
+        <div class="drink-list">
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Black Tea</span><span class="drink-desc">Classic bold black tea, served hot or iced.</span></div><span class="drink-price">Grande $3.00 / Large $3.50</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Green Tea</span><span class="drink-desc">Light and refreshing green tea, served hot or iced.</span></div><span class="drink-price">Grande $3.00 / Large $3.50</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Chai</span><span class="drink-desc">Warm spiced chai, served hot or iced.</span></div><span class="drink-price">Grande $3.00 / Large $3.50</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Herbal</span><span class="drink-desc">Choose from Chamomile, Passion Tea, or Wild Sweet Orange — naturally caffeine-free.</span></div><span class="drink-price">Grande $3.00 / Large $3.50</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Steeped Tea</span><span class="drink-desc">Any of the above teas fully steeped in hot water for a bolder, more flavourful brew — no bag on the side.</span></div><span class="drink-price">Grande $3.99 / Large $4.25</span></div>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Flavour Shots</h2>
+          <span class="item-count">Add to any drink</span>
+        </div>
+        <p class="section-note reveal">Customize your drink with any of our house flavour shots.</p>
+        <div class="flavour-grid reveal reveal-delay-1">
+          <span class="flavour-pill">Vanilla (SF)</span>
+          <span class="flavour-pill">French Vanilla</span>
+          <span class="flavour-pill">Raspberry</span>
+          <span class="flavour-pill">Caramel (SF)</span>
+          <span class="flavour-pill">Strawberry</span>
+          <span class="flavour-pill">Lavender</span>
+          <span class="flavour-pill">Cinnamon</span>
+          <span class="flavour-pill">Hazelnut</span>
+          <span class="flavour-pill">Pistachio</span>
+          <span class="flavour-pill">Peppermint</span>
+          <span class="flavour-pill">Coconut</span>
+          <span class="flavour-pill">Mojito Mix</span>
+          <span class="flavour-pill">Blue Curacao</span>
+          <span class="flavour-pill">Green Apple</span>
+          <span class="flavour-pill">Cherry</span>
+          <span class="flavour-pill">Toasted Marshmallow</span>
+        </div>
+      </section>
+
+      <div class="drinks-divider"></div>
+
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Milk Options</h2>
+          <span class="item-count">Substitute in any drink</span>
+        </div>
+        <p class="section-note reveal">Swap your milk in any drink at no extra charge.</p>
+        <div class="flavour-grid reveal reveal-delay-1">
+          <span class="flavour-pill">Half-and-Half</span>
+          <span class="flavour-pill">Whole Milk</span>
+          <span class="flavour-pill">Skim Milk</span>
+          <span class="flavour-pill">Oat Milk</span>
+          <span class="flavour-pill">Soy Milk</span>
+          <span class="flavour-pill">Almond Milk</span>
+          <span class="flavour-pill">Coconut Milk</span>
+          <span class="flavour-pill">Chocolate Milk 1%</span>
+        </div>
+      </section>
+
+    </div><!-- /sub-drinks-withoutcoffee -->
+
+    <!-- ── Kid's Drinks ──────────────────────────────────────── -->
+    <div class="sub-panel" id="sub-drinks-kids">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Kid's Drinks</h2>
+          <span class="item-count">Medium 16 oz · Large 20 oz</span>
+        </div>
+        <div class="drink-list">
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Strawberry Milk</span><span class="drink-desc">Sweet strawberry-flavoured milk.</span></div><span class="drink-price">Med $4.75 / Large $5.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Hot Chocolate</span><span class="drink-desc">Creamy hot chocolate — a kid's classic.</span></div><span class="drink-price">Med $4.75 / Large $3.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Blueberry Milk</span><span class="drink-desc">Sweet blueberry-flavoured milk.</span></div><span class="drink-price">Med $4.75 / Large $5.25</span></div>
+          <div class="drink-row reveal"><div class="drink-info"><span class="drink-name">Steamer</span><span class="drink-desc">Warm steamed milk with your choice of flavour.</span></div><span class="drink-price">Med $4.50 / Large $3.00</span></div>
+        </div>
+      </section>
+    </div><!-- /sub-drinks-kids -->
+
+  </div><!-- /tab-drinks -->
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOD TAB
+  ══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-food">
+
+    <div class="menu-subtabs" role="tablist" aria-label="Food subcategories">
+      <button class="tab-sub-btn active" data-subtab="food-breakfast" role="tab">Breakfast Combos</button>
+      <button class="tab-sub-btn" data-subtab="food-sweet" role="tab">Sweet Breakfast</button>
+      <button class="tab-sub-btn" data-subtab="food-sandwiches" role="tab">Sandwiches &amp; Wraps</button>
+      <button class="tab-sub-btn" data-subtab="food-burgers" role="tab">Burgers &amp; Fries</button>
+      <button class="tab-sub-btn" data-subtab="food-specials" role="tab">Third Cup Specials</button>
+      <button class="tab-sub-btn" data-subtab="food-kids" role="tab">Kid's Combos</button>
+      <button class="tab-sub-btn" data-subtab="food-croffles" role="tab">Signature Croffles</button>
+      <button class="tab-sub-btn" data-subtab="food-bowls" role="tab">Lunch Bowls</button>
+    </div>
+
+    <!-- Breakfast Combos -->
+    <div class="sub-panel active" id="sub-food-breakfast">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Breakfast Combos</h2>
+          <span class="item-count">All Day</span>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/breakfast%20combos/good%20morning%20combo.jpg" alt="Good Morning Combo" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Good Morning Combo</h3>
+              <p class="menu-card-desc">2 eggs, choice of 3 bacons or 2 sausages, 2 bread toast &amp; potato wedges.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$11.49</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/breakfast%20combos/bonjour%20combo.jpg" alt="Bonjour Combo" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Bonjour Combo</h3>
+              <p class="menu-card-desc">2 eggs, 3 bacons, 2 sausages, pancakes &amp; potato wedges.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$15.25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/breakfast%20combos/buenos%20dias%20combo.jpg" alt="Buenos Dias Combo" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Buenos Dias Combo</h3>
+              <p class="menu-card-desc">2 eggs, 3 bacons, 2 sausages, 2 French toast with mix berries &amp; potato wedges.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$17.25</span>
+                <span class="menu-card-tag">Fan Favourite</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/breakfast%20combos/guten%20morgen%20combo.jpg" alt="Guten Morgen Combo" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Guten Morgen Combo</h3>
+              <p class="menu-card-desc">2 eggs, 3 bacons, 2 sausages, 1 waffle with Nutella filling, strawberries, bananas &amp; potato wedges.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$17.25</span>
+                <span class="menu-card-tag">Fan Favourite</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/breakfast%20combos/eggs%20benedict.jpg" alt="Eggs Benedict" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Eggs Benedict</h3>
+              <p class="menu-card-desc">2 halves of an English muffin, each topped with ham, poached egg &amp; our signature hollandaise sauce, served with fruits &amp; potato wedges.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$17.99</span>
+                <span class="menu-card-tag">Signature</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/breakfast%20combos/keto%20combo.png" alt="Keto Combo" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Keto Combo</h3>
+              <p class="menu-card-desc">2 eggs, 2 sausages, 3 bacons, 1 whole avocado sliced, served with cucumber and tomato.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$15.99</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Sweet Breakfast -->
+    <div class="sub-panel" id="sub-food-sweet">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Sweet Breakfast</h2>
+          <span class="item-count">All Day</span>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/sweet%20breakfast/pancakes.jpg" alt="Pancakes" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Pancakes</h3>
+              <p class="menu-card-desc">Fluffy golden pancakes served with butter and maple syrup.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$10.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/sweet%20breakfast/french%20toast.jpg" alt="French Toast" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">French Toast</h3>
+              <p class="menu-card-desc">Thick-cut brioche French toast dusted with powdered sugar, served with maple syrup.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$11.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/sweet%20breakfast/waffles.jpg" alt="Waffles" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Waffles</h3>
+              <p class="menu-card-desc">Crispy Belgian waffles served with fresh toppings and maple syrup.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$11.99</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Sandwiches & Wraps -->
+    <div class="sub-panel" id="sub-food-sandwiches">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Sandwiches &amp; Wraps</h2>
+          <span class="item-count">Made fresh</span>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/sandwiches%20and%20wraps/ham%20and%20cheese.png" alt="Ham & Cheese" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Ham &amp; Cheese</h3>
+              <p class="menu-card-desc">Classic toasted ham and cheese sandwich.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$7.25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/sandwiches%20and%20wraps/grilled%20cheese.png" alt="Grilled Cheese" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Grilled Cheese</h3>
+              <p class="menu-card-desc">Golden toasted sourdough with melted cheddar — gooey, crispy, and satisfying.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$8.99</span>
+                <span class="menu-card-tag">Popular</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/sandwiches%20and%20wraps/blt%20sandwich.png" alt="BLT Sandwich" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">BLT Sandwich</h3>
+              <p class="menu-card-desc">Mayonnaise, bacon, lettuce &amp; tomato.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$8.79</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/sandwiches%20and%20wraps/avocado%20toast.png" alt="Avocado Toast" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Avocado Toast</h3>
+              <p class="menu-card-desc">Freshly smashed avocado on toasted sourdough bread.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$8.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/sandwiches%20and%20wraps/breakfast%20sandwich.png" alt="Breakfast Sandwich" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Breakfast Sandwich</h3>
+              <p class="menu-card-desc">Cream cheese, avocado, sunny side egg, bacon.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$11.25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/sandwiches%20and%20wraps/chicken%20salad%20sandwich.png" alt="Chicken Salad Sandwich" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Chicken Salad Sandwich</h3>
+              <p class="menu-card-desc">Third Cup signature chicken salad.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$10.99</span>
+                <span class="menu-card-tag">Signature</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/sandwiches%20and%20wraps/roast%20beef%20mushroom%20melt.png" alt="Roast Beef Mushroom Melt" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Roast Beef Mushroom Melt</h3>
+              <p class="menu-card-desc">Slow-roasted beef with sautéed mushrooms, melted cheese on toasted sourdough.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$15.99</span>
+                <span class="menu-card-tag">Chef's Pick</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/sandwiches%20and%20wraps/chicken%20shwarma.jpg" alt="Chicken Shawarma Wrap" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Chicken Shawarma Wrap</h3>
+              <p class="menu-card-desc">Seasoned chicken shawarma with fresh vegetables wrapped in a warm flatbread.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$14.99</span>
+                <span class="menu-card-tag">Popular</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Burgers & Fries -->
+    <div class="sub-panel" id="sub-food-burgers">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Burgers &amp; Fries</h2>
+          <span class="item-count">House-made patties, served with fries</span>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/burgers%20and%20fries/third%20cup%20og%20burger.jpg" alt="Third Cup OG Burger" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Third Cup OG Burger</h3>
+              <p class="menu-card-desc">Classic burger with Third Cup signature beef patty, tomato, sautéed onion, pickles, cheddar cheese, ketchup, mustard, mayo — served with fries.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$14.99</span>
+                <span class="menu-card-tag">Signature</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/burgers%20and%20fries/balsamic%20glazed%20mushroom%20burger.jpg" alt="Balsamic Glazed Mushroom Burger" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Balsamic Glazed Mushroom Burger</h3>
+              <p class="menu-card-desc">Third Cup signature beef patty, sautéed mushroom, balsamic caramelized onion, mayo — served with fries.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$16.25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/burgers%20and%20fries/crispy%20chicken%20burger.jpg" alt="Crispy Chicken Burger" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Crispy Chicken Burger</h3>
+              <p class="menu-card-desc">House-made crispy chicken, special chicken sauce, cheddar cheese, pickles — served with fries.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$15.99</span>
+                <span class="menu-card-tag">Popular</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/burgers%20and%20fries/chicken%20bbq%20burger.jpg" alt="Chicken BBQ Burger" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Chicken BBQ Burger</h3>
+              <p class="menu-card-desc">House-made crispy chicken, special BBQ sauce, Swiss cheese, pickles — served with fries.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$16.25</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Third Cup Specials -->
+    <div class="sub-panel" id="sub-food-specials">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Third Cup Specials</h2>
+          <span class="item-count">House-made specialties</span>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/third%20cup%20specials/pork%20bbq%20skewers.jpg" alt="Pork BBQ Skewers" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Pork BBQ Skewers</h3>
+              <p class="menu-card-desc">2 pcs home-made pork skewers served with rice and egg.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$16.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/third%20cup%20specials/chicken%20bbq.jpg" alt="Chicken BBQ" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Chicken BBQ</h3>
+              <p class="menu-card-desc">1 pc quarter leg chicken marinated with home-made BBQ sauce.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$16.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/third%20cup%20specials/chicken%20alredo%20pasta.jpg" alt="Chicken Alfredo Pasta" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Chicken Alfredo Pasta</h3>
+              <p class="menu-card-desc">Creamy Alfredo fettuccine with tender chicken, served with garlic bread.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$15.99</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Kid's Combos -->
+    <div class="sub-panel" id="sub-food-kids">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Kid's Combos</h2>
+          <span class="item-count">Little ones deserve great food too</span>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/kids%20combos/whatever.png" alt="Whatever" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">"Whatever"</h3>
+              <p class="menu-card-desc">1 waffle with Nutella and strawberries.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$8.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/kids%20combos/i%20dont%20know.png" alt="I Don't Know" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">"I Don't Know"</h3>
+              <p class="menu-card-desc">2 pancakes with 2 sausages.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$8.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/kids%20combos/im%20not%20hungry.png" alt="I'm Not Hungry" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">"I'm Not Hungry"</h3>
+              <p class="menu-card-desc">2 brioche French toast with 2 bacons.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$8.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/kids%20combos/eye%20roll.png" alt="Eye Roll" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">"Eye Roll"</h3>
+              <p class="menu-card-desc">Scrambled egg with 2 sausages &amp; 2 bacons.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$8.99</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Signature Croffles -->
+    <div class="sub-panel" id="sub-food-croffles">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Signature Croffles</h2>
+          <span class="item-count">Croissant + Waffle — our signature creation</span>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/signature%20croffles/nutella%20banana%20signature%20croffle.png" alt="Nutella Banana Croffle" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Nutella Banana</h3>
+              <p class="menu-card-desc">Nutella + sliced banana.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$7.25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/signature%20croffles/nutella%20strawberry.png" alt="Nutella Strawberry Croffle" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Nutella Strawberry</h3>
+              <p class="menu-card-desc">Nutella + fresh strawberries.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$7.25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/signature%20croffles/biscoff%20signature%20croffle.png" alt="Biscoff Croffle" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Biscoff</h3>
+              <p class="menu-card-desc">Spiced Biscoff cookie butter croffle.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$7.00</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/signature%20croffles/oreo%20signature%20croffle.png" alt="Oreo Croffle" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Oreo</h3>
+              <p class="menu-card-desc">Crushed Oreo cookie croffle.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$7.00</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Lunch Bowls -->
+    <div class="sub-panel" id="sub-food-bowls">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Lunch Bowls</h2>
+          <span class="item-count">Served fresh</span>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/lunch%20bowls/sweet%20chili%20chicken%20ala%20carte.jpg" alt="Sweet Chili Chicken Ala Carte" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Sweet Chili Chicken Ala Carte</h3>
+              <p class="menu-card-desc">Tender chicken in a sweet chili glaze.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$15.25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/lunch%20bowls/kung%20pao%20chicken%20bowl.png" alt="Kung Pao Chicken" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Kung Pao Chicken 🌶</h3>
+              <p class="menu-card-desc">Crispy chicken tossed in a kung pao sauce with peanuts &amp; scallions, served with fried rice.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$16.99</span>
+                <span class="menu-card-tag">Spicy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/lunch%20bowls/mongolian%20rice%20beef%20bowl.png" alt="Mongolian Beef Rice Bowl" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Mongolian Beef Rice Bowl</h3>
+              <p class="menu-card-desc">Savoury Mongolian beef served over steamed rice.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$16.99</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+              <img src="menu%20images/lunch%20bowls/chicken%20shawarma%20rice%20bowls.png" alt="Chicken Shawarma Rice Bowl" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Chicken Shawarma Rice Bowl</h3>
+              <p class="menu-card-desc">Seasoned shawarma chicken over saffron rice with fresh tomato, cucumber, red onion &amp; garlic sauce drizzle.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$16.25</span>
+                <span class="menu-card-tag">Popular</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+              <img src="menu%20images/lunch%20bowls/spring%20roll%20rice%20bowl.png" alt="Spring Roll Rice Bowl" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Spring Roll Rice Bowl</h3>
+              <p class="menu-card-desc">Crispy spring rolls served alongside steamed rice.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$16.25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+              <img src="menu%20images/lunch%20bowls/dynamite%20shrimp%20rice%20bowl.png" alt="Dynamite Shrimp Rice Bowl" />
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Dynamite Shrimp Rice Bowl</h3>
+              <p class="menu-card-desc">Crispy shrimp tossed in spicy dynamite sauce over steamed rice.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$21.99</span>
+                <span class="menu-card-tag">Chef's Pick</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+  </div><!-- /tab-food -->
+
+  <!-- ══════════════════════════════════════════════════════════
+       SWEETS TAB
+  ══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-sweets">
+
+    <div class="menu-subtabs" role="tablist" aria-label="Sweets subcategories">
+      <button class="tab-sub-btn active" data-subtab="sweets-snacks" role="tab">Snacks</button>
+      <button class="tab-sub-btn" data-subtab="sweets-desserts" role="tab">Desserts</button>
+    </div>
+
+    <!-- Snacks -->
+    <div class="sub-panel active" id="sub-sweets-snacks">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Snacks</h2>
+          <span class="item-count">Baked in-house</span>
+        </div>
+        <div class="snack-list reveal reveal-delay-1">
+          <div class="snack-row"><span class="snack-name">Old Fashioned Donut</span><span class="snack-price">$1.99</span></div>
+          <div class="snack-row"><span class="snack-name">Blueberry Muffin</span><span class="snack-price">$2.99</span></div>
+          <div class="snack-row"><span class="snack-name">Lemon Poppy Seed Muffin</span><span class="snack-price">$2.99</span></div>
+          <div class="snack-row"><span class="snack-name">Lemon Cranberry Muffin</span><span class="snack-price">$2.99</span></div>
+          <div class="snack-row"><span class="snack-name">Apple Strudel</span><span class="snack-price">$2.99</span></div>
+          <div class="snack-row"><span class="snack-name">Chocolate Chip Cookies</span><span class="snack-price">$4.29</span></div>
+          <div class="snack-row"><span class="snack-name">Blueberry Scone</span><span class="snack-price">$3.59</span></div>
+          <div class="snack-row"><span class="snack-name">Oatcake</span><span class="snack-price">$2.99</span></div>
+          <div class="snack-row"><span class="snack-name">Almond Croissant</span><span class="snack-price">$5.99</span></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Desserts -->
+    <div class="sub-panel" id="sub-sweets-desserts">
+      <section class="menu-section">
+        <div class="menu-section-header reveal">
+          <h2>Desserts</h2>
+          <span class="item-count">House-made daily</span>
+        </div>
+        <div class="snack-list reveal reveal-delay-1">
+          <div class="snack-row"><span class="snack-name">Tiramisu</span><span class="snack-price">$7.25</span></div>
+          <div class="snack-row"><span class="snack-name">Apple Cobbler</span><span class="snack-price">$5.25</span></div>
+          <div class="snack-row"><span class="snack-name">Mango Mousse</span><span class="snack-price">$2.50</span></div>
+          <div class="snack-row"><span class="snack-name">Chocolate Mousse</span><span class="snack-price">$2.50</span></div>
+          <div class="snack-row"><span class="snack-name">New York Cheesecake</span><span class="snack-price">$9.99</span></div>
+        </div>
+      </section>
+    </div>
+
+  </div><!-- /tab-sweets -->
+
+  <!-- ══════════════════════════════════════════════════════════
+       LIMITED TIME TAB
+  ══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel active" id="tab-limited">
+
+    <section class="menu-section" style="padding-top:2rem;">
+      <div class="menu-section-header reveal">
+        <h2>Summer Drink Out</h2>
+        <span class="item-count">Limited Time · All $8.00</span>
       </div>
-    </div>
-
-    <div class="menu-grid" style="margin-top:var(--sp-md)">
-
-      <article class="menu-card reveal reveal-delay-1">
-        <div class="menu-card-img-ph" style="background:linear-gradient(135deg,rgba(100,42,5,.08) 0%,rgba(238,200,207,.4) 100%)">
-          <span class="ph-icon">🌸</span>
+      <div class="limited-banner reveal reveal-delay-1">
+        <span class="limited-banner-icon">☀️</span>
+        <div>
+          <strong>Limited time — Summer only.</strong>
+          <p>All $8.00 before tax. Grab them before the season ends.</p>
         </div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Sakura Latte</h3>
-          <p class="menu-card-desc">Cherry blossom syrup, steamed oat milk, and a single-origin espresso shot. Light, floral, and fleeting.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$8.00</span>
-            <span class="menu-card-tag">Limited</span>
-          </div>
+      </div>
+      <div class="summer-strip reveal reveal-delay-2">
+        <div class="summer-item">
+          <img src="menu%20images/summer%20drink%20outs/Mocha%20Coconut%20Frappe.png" alt="Mocha Coconut Frappe" />
+          <span class="summer-name">Mocha Coconut Frappe</span>
         </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-2">
-        <div class="menu-card-img-ph" style="background:linear-gradient(135deg,rgba(100,42,5,.08) 0%,rgba(238,200,207,.4) 100%)">
-          <span class="ph-icon">🫙</span>
+        <div class="summer-item">
+          <img src="menu%20images/summer%20drink%20outs/Ube%20Frappe.png" alt="Ube Frappe" />
+          <span class="summer-name">Ube Frappe</span>
         </div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Mango Float Shake</h3>
-          <p class="menu-card-desc">Inspired by the classic Filipino mango float — layers of cream, ripe mango, and crushed biscuit in drink form.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$9.50</span>
-            <span class="menu-card-tag">Limited</span>
-          </div>
+        <div class="summer-item">
+          <img src="menu%20images/summer%20drink%20outs/horchata%20shaken%20espresso.png" alt="Horchata Shaken Espresso" />
+          <span class="summer-name">Horchata Shaken Espresso</span>
         </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-3">
-        <div class="menu-card-img-ph" style="background:linear-gradient(135deg,rgba(100,42,5,.08) 0%,rgba(238,200,207,.4) 100%)">
-          <span class="ph-icon">🍳</span>
+        <div class="summer-item">
+          <img src="menu%20images/summer%20drink%20outs/yarmouth%20sunset%20refresher.png" alt="Yarmouth Sunset Refresher" />
+          <span class="summer-name">Yarmouth Sunset Refresher</span>
         </div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Longsilog Plate</h3>
-          <p class="menu-card-desc">Garlic rice, two sunny-side eggs, and sweet pork longganisa. A proper Filipino breakfast — all day, obviously.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$16.00</span>
-            <span class="menu-card-tag">Limited</span>
-          </div>
+        <div class="summer-item">
+          <img src="menu%20images/summer%20drink%20outs/Golden%20Mango%20Frappe.png" alt="Golden Mango Frappe" />
+          <span class="summer-name">Golden Mango Frappe</span>
         </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-1">
-        <div class="menu-card-img-ph" style="background:linear-gradient(135deg,rgba(100,42,5,.08) 0%,rgba(238,200,207,.4) 100%)">
-          <span class="ph-icon">🫧</span>
+        <div class="summer-item">
+          <img src="menu%20images/summer%20drink%20outs/Avocado%20Frappe.png" alt="Avocado Frappe" />
+          <span class="summer-name">Avocado Frappe</span>
         </div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Calamansi Fizz</h3>
-          <p class="menu-card-desc">Filipino calamansi juice, honey, and sparkling water. Zippy, citrusy, and dangerously refreshing.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$7.00</span>
-            <span class="menu-card-tag">Limited</span>
-          </div>
+        <div class="summer-item">
+          <img src="menu%20images/summer%20drink%20outs/Cranberry%20Pinapple%20Refresher.png" alt="Cranberry Pineapple Refresher" />
+          <span class="summer-name">Cranberry Pineapple Refresher</span>
         </div>
-      </article>
+      </div>
+    </section>
 
-    </div>
-  </section>
-
-  <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(100,42,5,.1) 30%,rgba(100,42,5,.1) 70%,transparent);margin:0 var(--sp-lg);"></div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       DRINKS
-  ═══════════════════════════════════════════════════════ -->
-  <section class="menu-section" id="drinks">
-    <div class="menu-section-header reveal">
-      <h2>Drinks</h2>
-      <span class="item-count">Hot &amp; Cold</span>
-    </div>
-
-    <div class="menu-grid">
-
-      <article class="menu-card reveal reveal-delay-1">
-        <div class="menu-card-img-ph"><span class="ph-icon">☕</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Third Cup Classic</h3>
-          <p class="menu-card-desc">Double-shot espresso over oat milk with house vanilla syrup. The one that started it all.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$6.50</span>
-            <span class="menu-card-tag">Signature</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-2">
-        <div class="menu-card-img-ph"><span class="ph-icon">🧋</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Hibiscus Refresher</h3>
-          <p class="menu-card-desc">Cold-brewed hibiscus, passion fruit, and sparkling water. Tart, floral, unforgettable.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$7.00</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-3">
-        <div class="menu-card-img-ph"><span class="ph-icon">🥤</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Sunrise Smoothie</h3>
-          <p class="menu-card-desc">Mango, pineapple, banana, and coconut milk blended to a velvety, sun-coloured smoothie.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$8.50</span>
-            <span class="menu-card-tag">Vegan</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-1">
-        <div class="menu-card-img-ph"><span class="ph-icon">☕</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Cortado</h3>
-          <p class="menu-card-desc">Equal parts espresso and steamed whole milk. Short, strong, and perfectly balanced.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$5.00</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-2">
-        <div class="menu-card-img-ph"><span class="ph-icon">🍵</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Matcha Cloud</h3>
-          <p class="menu-card-desc">Ceremonial-grade matcha whisked with oat milk and topped with cold foam. Earthy and creamy.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$8.00</span>
-            <span class="menu-card-tag">Vegan</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-3">
-        <div class="menu-card-img-ph"><span class="ph-icon">🧊</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Brown Sugar Latte</h3>
-          <p class="menu-card-desc">Espresso, house-made brown sugar syrup, oat milk, and a dash of cinnamon over ice.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$7.50</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(100,42,5,.1) 30%,rgba(100,42,5,.1) 70%,transparent);margin:0 var(--sp-lg);"></div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       FOOD
-  ═══════════════════════════════════════════════════════ -->
-  <section class="menu-section" id="food">
-    <div class="menu-section-header reveal">
-      <h2>Food</h2>
-      <span class="item-count">All Day Breakfast &amp; Lunch</span>
-    </div>
-
-    <div class="menu-grid">
-
-      <article class="menu-card reveal reveal-delay-1">
-        <div class="menu-card-img-ph"><span class="ph-icon">🧇</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Brown Butter Waffles</h3>
-          <p class="menu-card-desc">Golden waffles with maple crème fraîche and seasonal fruit. Available all day.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$13.00</span>
-            <span class="menu-card-tag">All Day</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-2">
-        <div class="menu-card-img-ph"><span class="ph-icon">🍔</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Smash Burger</h3>
-          <p class="menu-card-desc">Double smashed patty, American cheese, pickles, and café sauce on a brioche bun.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$16.00</span>
-            <span class="menu-card-tag">Fan Fave</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-3">
-        <div class="menu-card-img-ph"><span class="ph-icon">🥑</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Avocado Toast</h3>
-          <p class="menu-card-desc">Sourdough, smashed avo, everything bagel seasoning, chilli, and a poached egg.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$14.00</span>
-            <span class="menu-card-tag">Vegetarian</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-1">
-        <div class="menu-card-img-ph"><span class="ph-icon">🍳</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Big Breakfast Plate</h3>
-          <p class="menu-card-desc">Two eggs your way, sourdough toast, grilled tomato, mushrooms, and crispy bacon.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$17.00</span>
-            <span class="menu-card-tag">All Day</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-2">
-        <div class="menu-card-img-ph"><span class="ph-icon">🥣</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Granola Bowl</h3>
-          <p class="menu-card-desc">House-toasted granola with coconut yogurt, honey, seeds, and fresh seasonal fruit.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$11.00</span>
-            <span class="menu-card-tag">Vegan</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-3">
-        <div class="menu-card-img-ph"><span class="ph-icon">🥞</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Ricotta Hotcakes</h3>
-          <p class="menu-card-desc">Fluffy ricotta pancakes with whipped butter, honeycomb, and a dusting of icing sugar.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$15.00</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(100,42,5,.1) 30%,rgba(100,42,5,.1) 70%,transparent);margin:0 var(--sp-lg);"></div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       DESSERTS / SNACKS
-  ═══════════════════════════════════════════════════════ -->
-  <section class="menu-section" id="desserts">
-    <div class="menu-section-header reveal">
-      <h2>Snacks &amp; Sweets</h2>
-      <span class="item-count">House Baked Daily</span>
-    </div>
-
-    <div class="menu-grid">
-
-      <article class="menu-card reveal reveal-delay-1">
-        <div class="menu-card-img-ph"><span class="ph-icon">🍰</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Lavender Chiffon Cake</h3>
-          <p class="menu-card-desc">Feather-light chiffon with earl grey cream and a delicate purple glaze. Sliced to order.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$9.00</span>
-            <span class="menu-card-tag">House Baked</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-2">
-        <div class="menu-card-img-ph"><span class="ph-icon">🍪</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Tahini Choc Chip Cookie</h3>
-          <p class="menu-card-desc">Thick, chewy, dark chocolate chunks and flaky sea salt. Warm on request.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$4.50</span>
-            <span class="menu-card-tag">House Baked</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="menu-card reveal reveal-delay-3">
-        <div class="menu-card-img-ph"><span class="ph-icon">🍮</span></div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-name">Espresso Panna Cotta</h3>
-          <p class="menu-card-desc">Silky espresso cream set to a gentle jiggle, with caramel glaze and a single coffee bean.</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">$8.00</span>
-            <span class="menu-card-tag">Seasonal</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
+  </div><!-- /tab-limited -->
 
   <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer id="contact" class="site-footer" style="margin-top:var(--sp-xl)">
@@ -355,19 +1026,24 @@
       <div class="footer-col">
         <h4>Hours</h4>
         <p>
-          Mon – Fri: 7 am – 7 pm<br />
-          Saturday: 8 am – 6 pm<br />
-          Sunday: 9 am – 5 pm
+          Mon – Sat: 6:30 am – 7 pm<br />
+          Sunday: 6:30 am – 6 pm
         </p>
       </div>
       <div class="footer-col">
         <h4>Find Us</h4>
         <address>
-          42 Ember Lane<br />
-          Brooklyn, NY 11201<br /><br />
-          hello@thirdcup.co<br />
-          (718) 555-0192
+          <a href="https://maps.google.com/?q=10+John+St,+Yarmouth,+NS+B5A+1E5" target="_blank" rel="noopener">10 John St<br />Yarmouth, NS B5A 1E5</a><br /><br />
+          <a href="tel:+19023072285">(902) 307-2285</a>
         </address>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61558027832886&sk=photos" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/thirdcupcanada/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -377,5 +1053,69 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // ── Tab system ──────────────────────────────────────────
+    function initTabs() {
+      // Main tabs
+      const mainBtns = document.querySelectorAll('.tab-main-btn');
+      const mainPanels = document.querySelectorAll('.tab-panel');
+
+      mainBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.dataset.tab;
+          mainBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+          mainPanels.forEach(p => p.classList.remove('active'));
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected','true');
+          document.getElementById('tab-' + target).classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+
+      // All sub-tabs (panel-switching) — Drinks, Food, Sweets
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.tab-sub-btn');
+        if (!btn) return;
+        const targetId = btn.dataset.subtab;
+        const parentPanel = btn.closest('.tab-panel');
+        parentPanel.querySelectorAll('.tab-sub-btn').forEach(b => b.classList.remove('active'));
+        parentPanel.querySelectorAll('.sub-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        const subPanel = document.getElementById('sub-' + targetId);
+        if (subPanel) {
+          subPanel.classList.add('active');
+          subPanel.querySelectorAll('.reveal').forEach(el => {
+            el.classList.remove('visible');
+            requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('visible')));
+          });
+        }
+      });
+    }
+
+    initTabs();
+
+    // ── Hash-based tab activation (from homepage links) ──────
+    const hashTabMap = {
+      'drinks':       { tab: 'drinks' },
+      'food':         { tab: 'food' },
+      'sweets':       { tab: 'sweets' },
+      'desserts':     { tab: 'sweets', subtab: 'sweets-desserts' },
+      'limited-time': { tab: 'limited' },
+      'limited':      { tab: 'limited' },
+    };
+    function activateTabFromHash() {
+      const hash = window.location.hash.replace('#', '');
+      const mapping = hashTabMap[hash];
+      if (!mapping) return;
+      const btn = document.querySelector(`.tab-main-btn[data-tab="${mapping.tab}"]`);
+      if (btn) btn.click();
+      if (mapping.subtab) {
+        const subBtn = document.querySelector(`.tab-sub-btn[data-subtab="${mapping.subtab}"]`);
+        if (subBtn) subBtn.click();
+      }
+    }
+    activateTabFromHash();
+    window.addEventListener('hashchange', activateTabFromHash);
+  </script>
 </body>
 </html>
