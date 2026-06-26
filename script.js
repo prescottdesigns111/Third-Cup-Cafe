@@ -1,3 +1,31 @@
+/* ── Open / Closed status (Atlantic Time) ────────────────── */
+(function () {
+  const statusEl = document.getElementById('open-status');
+  const dotEl    = document.getElementById('badge-dot');
+  if (!statusEl) return;
+
+  function checkOpen() {
+    const now = new Date();
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/Halifax',
+      hour: 'numeric', minute: 'numeric', hour12: false, weekday: 'short'
+    }).formatToParts(now);
+
+    const p = {};
+    parts.forEach(x => p[x.type] = x.value);
+    const total   = parseInt(p.hour) * 60 + parseInt(p.minute);
+    const open    = 6 * 60 + 30;                          // 6:30 am
+    const close   = p.weekday === 'Sun' ? 18 * 60 : 19 * 60; // 6 pm Sun, 7 pm otherwise
+
+    const isOpen  = total >= open && total < close;
+    statusEl.textContent = isOpen ? 'Open Now' : 'Closed';
+    if (dotEl) dotEl.style.background = isOpen ? '' : 'rgba(100,42,5,.35)';
+  }
+
+  checkOpen();
+  setInterval(checkOpen, 60000);
+})();
+
 /* ── Nav scroll state ────────────────────────────────────── */
 (function () {
   const nav = document.querySelector('.site-nav');
