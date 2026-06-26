@@ -71,6 +71,17 @@ a  { color: inherit; text-decoration: none; }
   transition: opacity var(--t);
 }
 .nav-links a:hover, .nav-links a.active { opacity: 1; }
+.nav-coming-soon {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  background: var(--c-pink);
+  color: var(--c-brown);
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  opacity: 1;
+}
 
 /* ── Buttons ─────────────────────────────────────────────── */
 .btn {
@@ -218,7 +229,6 @@ a  { color: inherit; text-decoration: none; }
 }
 .hero-float-img img {
   width: var(--w, 240px);
-  filter: drop-shadow(0 32px 56px rgba(100,42,5,.2));
 }
 
 .hf-1 { --tz:60px;  --w:260px; --dur:4.4s; --dy:-18px; --rot:-6deg; bottom:0; left:-60px; }
@@ -484,6 +494,46 @@ a  { color: inherit; text-decoration: none; }
   font-weight: 300;
   line-height: 1.8;
 }
+.footer-social {
+  display: flex;
+  gap: var(--sp-sm);
+  margin-top: var(--sp-sm);
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(244,234,224,.2);
+  color: var(--c-bg);
+  opacity: .6;
+  transition: opacity var(--t), border-color var(--t);
+}
+.footer-social a:hover { opacity: 1; border-color: rgba(244,234,224,.5); }
+
+/* Linkable address / phone */
+.visit-card address a,
+.visit-card p a {
+  color: var(--c-brown);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(100,42,5,.25);
+  transition: text-decoration-color var(--t);
+}
+.visit-card address a:hover,
+.visit-card p a:hover { text-decoration-color: var(--c-brown); }
+
+.footer-col address a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(244,234,224,.2);
+  transition: text-decoration-color var(--t);
+}
+.footer-col address a:hover { text-decoration-color: rgba(244,234,224,.6); }
+
 .footer-bottom {
   max-width: 1100px;
   margin: var(--sp-lg) auto 0;
@@ -684,6 +734,262 @@ a  { color: inherit; text-decoration: none; }
   border-radius: 999px;
   background: var(--c-pink);
   color: var(--c-brown);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MENU PAGE — TAB SYSTEM
+═══════════════════════════════════════════════════════ */
+
+/* Sticky main tab bar */
+.menu-tabs-main {
+  position: sticky;
+  top: 60px;
+  z-index: 89;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  padding: 1rem var(--sp-lg);
+  background: rgba(244,234,224,.96);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(100,42,5,.1);
+}
+
+.tab-main-btn {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: .65rem 2.2rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background: transparent;
+  color: var(--c-muted);
+  cursor: pointer;
+  transition: all var(--t);
+  letter-spacing: -.01em;
+}
+.tab-main-btn:hover { color: var(--c-brown); }
+.tab-main-btn.active {
+  background: var(--c-brown);
+  color: var(--c-bg);
+}
+
+/* Sub-tab bar */
+.menu-subtabs {
+  display: flex;
+  gap: .35rem;
+  padding: .65rem var(--sp-lg);
+  background: var(--c-cream);
+  border-bottom: 1px solid rgba(100,42,5,.07);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Drinks anchor nav — sticky below the main tab bar */
+.drinks-anchornav {
+  position: sticky;
+  top: 130px;
+  z-index: 88;
+  background: rgba(253,248,244,.97);
+  backdrop-filter: blur(20px);
+}
+
+.tab-sub-btn {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  padding: .4rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  background: transparent;
+  color: var(--c-muted);
+  cursor: pointer;
+  transition: all var(--t);
+  white-space: nowrap;
+}
+.tab-sub-btn:hover { color: var(--c-brown); }
+.tab-sub-btn.active {
+  color: var(--c-brown);
+  border-color: rgba(100,42,5,.22);
+  background: rgba(100,42,5,.06);
+}
+
+/* Panel visibility */
+.tab-panel  { display: none; }
+.tab-panel.active  { display: block; }
+.sub-panel  { display: none; }
+.sub-panel.active  { display: block; }
+
+/* Real image card */
+.menu-card-img {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, rgba(100,42,5,.05) 0%, rgba(238,200,207,.25) 100%);
+}
+.menu-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease);
+}
+.menu-card:hover .menu-card-img img { transform: scale(1.06); }
+
+/* Summer drink out badge on card */
+.card-limited-badge {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  background: var(--c-brown);
+  color: var(--c-bg);
+  padding: .22rem .7rem;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+/* Flavour shots list */
+.flavour-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: var(--sp-md);
+}
+.flavour-pill {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .4rem 1.1rem;
+  border-radius: 999px;
+  background: var(--c-cream);
+  color: var(--c-brown);
+  border: 1.5px solid rgba(100,42,5,.12);
+}
+
+/* Section note (e.g. "All $7.93 before tax") */
+.section-note {
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+  font-weight: 300;
+  margin-bottom: var(--sp-md);
+  font-style: italic;
+}
+
+/* Summer drink out — horizontal photo strip */
+.summer-strip {
+  display: flex;
+  flex-direction: row;
+  gap: var(--sp-lg);
+  margin-top: var(--sp-lg);
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: var(--sp-sm);
+}
+.summer-strip::-webkit-scrollbar { display: none; }
+
+.summer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 150px;
+  gap: .65rem;
+}
+.summer-item img {
+  width: 150px;
+  height: 220px;
+  object-fit: contain;
+  object-position: center bottom;
+  border-radius: .5rem;
+  transition: transform .4s var(--ease);
+}
+.summer-item:hover img { transform: translateY(-6px) scale(1.03); }
+.summer-name {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--c-brown);
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* Drink list rows */
+.drink-list {
+  display: flex;
+  flex-direction: column;
+}
+.drink-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-md);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(100,42,5,.07);
+}
+.drink-row:last-child { border-bottom: none; }
+.drink-info {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.drink-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-brown);
+}
+.drink-desc {
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+  font-weight: 300;
+  max-width: 52ch;
+  line-height: 1.5;
+}
+.drink-price {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--c-brown);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Divider between drink sections */
+.drinks-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100,42,5,.12) 30%, rgba(100,42,5,.12) 70%, transparent);
+  margin: 0 var(--sp-lg);
+}
+
+/* Snacks list-style layout */
+.snack-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  gap: var(--sp-sm);
+  margin-top: var(--sp-md);
+}
+.snack-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .85rem var(--sp-md);
+  background: var(--c-cream);
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(100,42,5,.07);
+}
+.snack-name {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--c-brown);
+}
+.snack-price {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--c-brown);
+  flex-shrink: 0;
+  margin-left: var(--sp-sm);
 }
 
 /* ─── Responsive ─────────────────────────────────────────── */
